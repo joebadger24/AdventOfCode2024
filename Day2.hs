@@ -50,7 +50,7 @@ subResolve (x:xs)
     | resolve (variations x) > 0 = 1 + subResolve xs
     | otherwise = subResolve xs
 
---- Program:
+--- Main Program:
 
 main :: IO ()
 main =  do
