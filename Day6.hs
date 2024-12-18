@@ -128,11 +128,3 @@ printGrid n grid =
 chunk :: Int -> [a] -> [[a]]
 chunk _ [] = []
 chunk n xs = take n xs : chunk n (drop n xs)
-
-timeIt :: IO a -> IO a
-timeIt action = do
-    start <- getCurrentTime
-    result <- action
-    end <- getCurrentTime
-    putStrLn $ "Elapsed time: " ++ show (diffUTCTime end start)
-    return result
